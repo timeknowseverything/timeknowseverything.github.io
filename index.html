@@ -1,110 +1,12 @@
 <!doctype html>
-<!-- 
-
-       ————————————————                ———————                —————————————————         —————                     —————     —————————————————————                   ———————          ———————         ——————         ——————        ——————         ——————
-      |                |               |     |               |                  |       \    \                   /    /     |                   |                   |     |          |     |         \     \       /     /        \     \       /     /
-       —————      —————                |     |              |    ___________     |       \    \                 /    /      |     ——————————————                    |     |          |     |          \     \     /     /          \     \     /     /
-	    |    |                     |     |             |    |            |    |       \    \               /    /       |    |                                  |     |          |     |           \     \   /     /            \     \   /     /
-	    |    |                     |     |            |    |              |    |       \    \             /    /        |    —————————————                      |     |          |     |            \     ———     /              \     ———     /
-	    |    |                     |     |           |    |                |    |       \    \           /    /         |                |                      |     ————————————     |             \           /                \           /
-	    |    |                     |     |            |    |              |    |         \    \         /    /          |    —————————————                      |                      |              ———     ———                  ———     ———
-	    |    |                     |     |             |    |            |    |           \    \       /    /           |    |                                  |     ————————————     |                 |   |                        |   |
-	    |    |                     |     |              |    |          |    |             \    \     /    /            |    |                                  |     |          |     |                 |   |                        |   |
-       —————      —————                |     ————————————    |    ___________   |               \    \———/    /             |    ————————————————                   |     |          |     |                 |   |                        |   |                                                         
-      |                |               |                 |    |                |                 \           /              |                   |                   |     |          |     |                 |   |                        |   |
-       ————————————————                ——————————————————      ————————————————                   ———————————               —————————————————————                   ———————          ———————                 —————                        —————
-
--->
 <html>
-<head>
-<meta charset="utf-8">
-<title>CIAO AMORE</title>
-<script  type="text/javascript">
-// 起始时间
-	var str ='2016-12-11 21:34:00';
-	str = str.replace(/-/g,"/");
-	var date = new Date(str).getTime();
-	
-	function setMyDate()
-	{
-		
-		// 获取当前时间戳
-		var myDate = new Date().getTime();
-		var day = parseInt(myDate)- parseInt(date);
-		var year  = Math.floor(day / (24 * 3600 * 1000*30*12));
-		var leave1 = day % (24 * 3600 * 1000*30*12);		
-		var month  = Math.floor(leave1 / (24 * 3600 * 1000*30));
-		var leave2 = leave1 % (24 * 3600 * 1000*30);	
-		var days = Math.floor(leave2 / (24 * 3600 * 1000));
-		var leave3 = day % (24 * 3600 * 1000);
-		var hours = Math.floor(leave3 / (3600 * 1000));
-		var leave4 = leave3 % (3600 * 1000);
-		var minutes = Math.floor(leave4 / (60 * 1000));
-		var leave5 = leave4 % (60 * 1000);
-		var seconds = Math.round(leave5 / 1000);
-		
-		document.getElementById("year").innerHTML =year;
-		document.getElementById("month").innerHTML = month;
-		document.getElementById("day").innerHTML = days;
-		document.getElementById("hours").innerHTML = hours; 
-		document.getElementById("minutes").innerHTML = minutes; 
-		document.getElementById("seconds").innerHTML = seconds;
-		
-		setTimeout("setMyDate()",1000);
-	}
-	
-	window.onload = function(){
-		var height = window.screen.height;
-		var width = window.screen.width;
-		
-		
-		if(height>width)
-		{
-			window.location.href="mobile.html";
-		}
-		
-		
-		var iframe = document.getElementById("iframe");
-		var title = document.getElementById("title");
-		var time = document.getElementById("time");
-		var timeDetail = document.getElementById("timeDetail");
-		var forYou = document.getElementById("forYou");
-	
-		iframe.style.height = height/2+"px";
-		iframe.style.marginTop = height/4+"px";
-		
-		title.style.height = height/4+"px";
-		title.style.lineHeight = height/3+"px";
-		
-		time.style.height = height/4+"px";
-		timeDetail.style.height = height/8+"px";
-		forYou.style.height = height/8+"px";
-		forYou.style.lineHeight = height/4+"px";
-		
-		setMyDate();	
-	}
-</script>
-</head>
-
-<body id="bo" style=" margin:0; padding:0; overflow:hidden;background:url('background.jpg'); background-size:100%;">
-    <div id="iframe" style=" width:100%;  text-align:center; font-family:'Sukhumvit Set','Helvetica 	      Neue','Helvetica','Arial','sans-serif';font-style: normal;" align="center" >
-        <div id="title" style=" width:100%; color:#fff;text-align:center; font-size:40px; " align="center">
-        	CIAO AMORE
-        </div>
-        <div id="time" style=" width:100%; color:#fff;text-align:center; font-size:30px;" align="center">
-            <div id="timeDetail"> 
-                <span id="year">0000</span>years&nbsp;&nbsp;
-                <span id ="month">00</span>months&nbsp;&nbsp;
-                <span id="day">00</span>days&nbsp;&nbsp;
-                <span id="hours">00</span>hours&nbsp;&nbsp;
-                <span id="minutes">00</span>minutes&nbsp;&nbsp;
-                <span id="seconds">00</span>seconds
-            </div>
-        </div>
-    	<div id="forYou" style=" width:100%; color:#fff; font-size:10px;position: absolute; bottom: 25px; left：0px
-" align="center" >
-		Love is the only thing that holds the dark at bay
-    	</div>
-    </div>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>timeknowseverything</title>
+	</head>
+	<body style="margin:0; padding:0; overflow:hidden; background-color: #ffffff; background-size: 100%;">
+		<div style="position: absolute; width: 100%; top: 50%; text-align: center; color: #000000; font-size: 50px; font-family:'Sukhumvit Set','HelveticaNeue','Helvetica','Arial','sans-serif';font-style: normal;">
+			TIME KNOWS EVERYTHING
+		</div>
+	</body>
 </html>
